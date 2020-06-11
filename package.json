@@ -1,0 +1,26 @@
+{
+  "name": "ketchup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "knex": "^0.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matai-2020/Ketchup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matai-2020/Ketchup/issues"
+  },
+  "homepage": "https://github.com/matai-2020/Ketchup#readme",
+  "description": ""
+}

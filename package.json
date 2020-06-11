@@ -4,11 +4,15 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
-    "knex": "^0.21.1"
+    "knex": "^0.21.1",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {
+    "knex": "knex",
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },

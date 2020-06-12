@@ -49,15 +49,15 @@ router.post('/sandwich', (req, res) => {
   returnNutrition(sub)
     .then(data => {
       data.forEach(item => {
-        nutrition.serving_size += item.serving_size
-        nutrition.energy += item.energy
-        nutrition.protein += item.protein
-        nutrition.fat_total += item.fat_total
-        nutrition.sat_fat += item.sat_fat
-        nutrition.carbs += item.carbs
-        nutrition.sugars += item.sugars
-        nutrition.dietary_fiber += item.dietary_fiber
-        nutrition.sodium += item.sodium
+        nutrition.serving_size += Math.floor(item.serving_size)
+        nutrition.energy += Math.floor(item.energy)
+        nutrition.protein += Math.floor(item.protein)
+        nutrition.fat_total += Math.floor(item.fat_total)
+        nutrition.sat_fat += Math.floor(item.sat_fat)
+        nutrition.carbs += Math.floor(item.carbs)
+        nutrition.sugars += Math.floor(item.sugars)
+        nutrition.dietary_fiber += Math.floor(item.dietary_fiber)
+        nutrition.sodium += Math.floor(item.sodium)
       })
       res.render('display', nutrition)
     })

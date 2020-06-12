@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const db = require('./db')
-const { returnNutrition } = require('./db')
+const { returnNutrition, audioPlay } = require('./db')
 
 router.get('/', (req, res) => {
   db.getUsers()
@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/select/:id', (req, res) => {
+
   const id = Number(req.params.id)
   //   db.getSelections(id) // tbd
   //     .then(selections => { // tbd
@@ -40,10 +41,11 @@ let nutrition = {
 }
 
 router.post('/sandwich', (req, res) => {
-//   const id = Number(req.params.id)
-//   const body = req.params.body
-//   console.log(body)
-//   db.getFave(id)
+  
+  //   const id = Number(req.params.id)
+  //   const body = req.params.body
+  //   console.log(body)
+  //   db.getFave(id)
   const sub = req.body
   // console.log(sub)
   returnNutrition(sub)

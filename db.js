@@ -9,6 +9,7 @@ module.exports = {
   getNut,
   returnNutrition
 
+
 }
 
 function getUsers (db = connection) {
@@ -36,5 +37,5 @@ function returnNutrition (sub, db = connection) {
   return db('nutritional_data')
     .whereIn('id', [sub.bread, sub.meat, sub.sauce, sub.cheese])
     .select()
-
 }
+

@@ -6,7 +6,8 @@ module.exports = {
   getUsers,
   getSelections,
   getFave,
-  getNut
+  getNut,
+  returnNutrition
 
 }
 
@@ -29,4 +30,11 @@ function getNut (user_id, db = connection) {
   return db('Users')
     .join('nutritional_data', 'nutritional_data.id', 'Users.user_id')
     .where('users.id', user_id)
+}
+
+function returnNutrition (sub, db = connection) {
+  return db('nutritional_data')
+    .whereIn('id', [sub.bread, sub.meat, sub.sauce, sub.cheese])
+    .select()
+
 }

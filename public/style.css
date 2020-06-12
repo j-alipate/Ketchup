@@ -69,8 +69,25 @@ label {
 }
 
 .box {
-	background-color: aqua;
+	background-color: yellow;
 	border-radius: 10px;
 	border-color: blue;
-	border-width: 10px;
+  border-width: 10px;
+  width: 30%;
+  margin: 0 auto;
 } 
+
+table {
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+td { 
+  margin:0 auto;
+  border: 2px solid black;
+}
+
+input {
+  
+  margin: 0 auto;
+}
